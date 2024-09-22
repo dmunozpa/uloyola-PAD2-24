@@ -5,15 +5,12 @@ import random
 
 def roll_two_dice():
     
-    dice1 = random.randint(1,6)
-    dice2 = random.randint(1,6)
-
-    return dice1,dice2
+    return #TODO
 
 def main():
  
-    dice1, dice2 = roll_two_dice()
-    print(f"Sum total: ",dice1+dice2)
+    die1, die2 = roll_two_dice()
+    print(f"Sum total: ",die1+die2)
     
 if __name__ == "__main__":
     main()
