@@ -3,7 +3,7 @@ import string
 
 def generate_password(length:int)-> str:
     # Define the possible characters for the password: letters, digits, and punctuation
-    characters = # TODO
+    characters = string.ascii_letters + string.digits + string.punctuation
     
     # Randomly choose 'length' number of characters from the characters list
     password = ''.join(random.choice(characters) for i in range(length))
@@ -16,7 +16,7 @@ def main():
 
     try:
     
-        # TODO
+        password_length = int(input("Enter the length for the password: "))
     
         if password_length <= 0:
             print("Please enter a positive number.")
