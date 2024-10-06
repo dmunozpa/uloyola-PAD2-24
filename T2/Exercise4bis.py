@@ -1,5 +1,5 @@
 import math
-
+# Rename
 # Create the abstract class Figure
 class Figure:
     def __init__(self):
