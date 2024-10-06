@@ -1,5 +1,5 @@
 import math
-# We will nedd to import math library.
+
 # Create the abstract class Figure
 class Figure:
     def __init__(self):
