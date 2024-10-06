@@ -1,5 +1,5 @@
 import math
-
+# We will nedd to import math library.
 # Create the abstract class Figure
 class Figure:
     def __init__(self):
@@ -16,51 +16,59 @@ class Figure:
 class Square(Figure):
     def __init__(self, side=1):
         super().__init__()
-        self.side = side
+        # TODO: Set the attribute: side
 
     def calculate_area(self):
-        self.area = self.side * self.side
+        # TODO: Calculate the area: area = side*side 
+        pass
 
     def calculate_perimeter(self):
-        self.perimeter = 4 * self.side
+        # TODO: Calculate the perimeter: perimeter = 4 * side
+        pass
 
 #  Circle class
 class Circle(Figure):
     def __init__(self, radius=1):
         super().__init__()
-        self.radius = radius
+        # TODO: Set the attribute: rasius
+
 
     def calculate_area(self):
-        self.area = math.pi * self.radius**2
+        # TODO: Calculate the area = math.pi * radius^2
+        pass
 
     def calculate_perimeter(self):
-        self.perimeter = 2 * math.pi * self.radius
+        # TODO: Calculate the perimeter = 2* math.pi * radius
+        pass 
 
 # Triangle class 
 class Triangle(Figure):
     def __init__(self, side=1):
         super().__init__()
-        self.side = side
+        # TODO: Update the atritutes
 
     def calculate_area(self):
-        height = (math.sqrt(3) / 2) * self.side  
-        self.area = (self.side * height) / 2
+        # TODO: First calctulate the height = ( sqrtr 3 / 2 ) * side
+        # TODO: update the area = (side*height) / 2
+        pass
 
     def calculate_perimeter(self):
-        self.perimeter = 3 * self.side
-
+        # TODO: Set the perimeter ? 3 * side.
+        pass
+        
 # rectangle class
 class Rectangle(Figure):
     def __init__(self, height=1, width=1):
         super().__init__()
-        self.height = height
-        self.width = width
+        #TODO Update the atritutes
 
     def calculate_area(self):
-        self.area = self.length * self.width
+        # TODO: Set the Area = leght * with
+        pass
 
     def calculate_perimeter(self):
-        self.perimeter = 2 * (self.length + self.width)
+        # TODO: Set the perimeter = 2 * ( legnth + with)
+        pass
 
 if __name__ == "__main__":
     square = Square(5)
