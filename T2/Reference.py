@@ -55,10 +55,17 @@ class Person:
 
 # Example usage of the Person class:
 john = Person("John", "M", 30, "123 Main St", "555-123-4567")
-copy = john
 
-#copy =  john.copy()
+# 1.- Copy using reference, the two variables are the same, if you change a value in one, the other is updated too.
+
+#copy = john
+
+# 2.- Copy using Copy method, the two variables are different objetcs, if you change a value in one, the other is NOT updated.
+copy =  john.copy()
+
+# Test code
 
 copy.age = 12
 
 print(john.age)
+
