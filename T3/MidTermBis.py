@@ -6,7 +6,11 @@ class Publication:
         self.status = status
 
     def __str__(self):
-        #TODO - Return a string with the relevant info
+      #TODO - Return a string with the relevant info
+
+
+    def __repr__(self):
+      #TODO - Return a string with the relevant info
 
 class Book(Publication):
     def __init__(self, title, authors, year, ISBN, pages, status="available"):
@@ -118,18 +122,14 @@ library.register_user(student1)
 library.show_catalogue()
 
 library.lend_pub(professor1, book1)        
-library.lend_pub(student1, book1)          
+library.lend_pub(student1, book1) # the book should be borrowed         
 print(student1.pubs)                       
 
 library.return_pub(professor1, book1)      
-library.lend_pub(student1, book1)          
+library.lend_pub(student1, book1)   # the book should be available now       
 library.lend_pub(student1, journal2)       
 
 print(student1.pubs) 
 
-library.lend_pub(student2, journal1)       
-
-###################
-### OUPUT CODE ####
-###################
+library.lend_pub(student2, journal1)   # User not registred      
 
