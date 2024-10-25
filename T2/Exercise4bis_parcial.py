@@ -32,16 +32,19 @@ class Square(Figure):
 #  Circle class
 class Circle(Figure):
     def __init__(self, radius=1):
-        super().__init__()
-        # TODO: Set the attribute: rasius
+        #super().__init__()
+        # TODO: Set the attribute: radius
+        self.radius = radius
 
 
     def calculate_area(self):
         # TODO: Calculate the area = math.pi * radius^2
+        self.area = math.pi * self.radius**2
         pass
 
     def calculate_perimeter(self):
         # TODO: Calculate the perimeter = 2* math.pi * radius
+        self.perimeter = 2 * math.pi * self.radius
         pass 
 
 # Triangle class 

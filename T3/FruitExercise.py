@@ -7,6 +7,14 @@ class Fruit:
     
     def makeJuice(self) -> str:
         return "This fruit doesnt have juice"
+    
+    def __str__(self) -> str:
+        result = "The fruit is "+self.color+" and the cost is "+str(self.prize)
+        return result
+    
+    def __repr__(self) -> str:
+        result = "The fruit is "+self.color+" and the cost is "+str(self.prize)
+        return result
 
 class Apple(Fruit):
 
@@ -41,12 +49,17 @@ class Grape(Fruit):
         return juice
     
     def __str__(self) -> str:
-        # TODO
-        return ''
+        typeOfFruit = self.__class__.__name__
+        result = "This is a ["+typeOfFruit+"] and is "+self.color+" and is from "+self.region
+        return result
     
     def __repr__(self) -> str:
-        # TODO
-        return ''
+        typeOfFruit = self.__class__.__name__
+        result = "This is a ["+typeOfFruit+"] and is "+self.color+" and is from "+self.region
+        return result
+    
+    def __del__():
+        print(" Object Deleted")
         
 
 ###################
@@ -70,5 +83,16 @@ pearJuice = myPoorPear.makeJuice()
 print(pearJuice)
 
 #######################
+
+grape1 = Grape('green','Sevilla','dulce')
+
+# For the redApple object, the method will be the father class - Fruit.
+print(redApple)
+
+# For the myPoorPear object, the method will be the father class - Fruit.
+print(myPoorPear)
+
+# For the grape1 object, the method will be him method.
+print(grape1)
 
 
