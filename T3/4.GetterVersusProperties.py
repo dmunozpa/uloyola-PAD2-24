@@ -20,12 +20,12 @@ class Student:
 	@name.setter 
 	def name(self,newname: str):
 		self.__name = newname
-
-    def __str(self)__:
-        return print("Nombre del Objeto"+self.name)
-
-    def __repr(self)__:
-        return print("Nombre del Objeto"+self.name)
+	
+	def __repr__(self) -> str:
+		return print("Nombre del Objeto"+self.name)
+	
+	def __str__(self) -> str:
+		return print("Nombre del Objeto"+self.name)
 
 
 ## EXAMPLES ##

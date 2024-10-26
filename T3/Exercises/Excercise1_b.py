@@ -1,11 +1,11 @@
 import random
 
 class Dice:
-    #To do
+    # TODO: Build the constructor method
         self.sides = sides
 
-    def roll(self):
-        #To do
+    def roll(self)->int:
+        # TODO: Make the method roll, return the value of the dice,
 
 # Testing program
 #To do

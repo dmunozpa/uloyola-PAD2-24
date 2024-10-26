@@ -42,9 +42,9 @@ class Grape(Fruit):
         self.type = type
 
     def makeJuice(self) -> str:
-        if self.color is 'red':
+        if self.color == 'red':
             juice = 'Tinto'
-        if self.color is 'green':
+        if self.color == 'green':
             juice = 'Blanco'
         return juice
     
