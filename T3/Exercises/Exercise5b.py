@@ -49,11 +49,11 @@ class Mobile(Terminal):
         # Get the Tafif crom tariff_rates
         cost_per_minute = self.tariff_rates[self.rate]
 
-        cost = (duration / 60) * cost_per_minute
+        cost_call = (duration / 60) * cost_per_minute
         self.conversation_time += duration
         other_terminal.conversation_time += duration
 
-        self.cost += cost
+        self.cost = self.cost + cost_call
 
     # Change Rate Metof
     def changerate(self, newrate:str):
@@ -64,6 +64,9 @@ class Mobile(Terminal):
 
     # Redefition of String, adding the charged cost with 2 digits
     def __str__(self):
+        return f"{super().__str__()} - charged {self.cost:.2f}€"
+
+    def __repr__(self):
         return f"{super().__str__()} - charged {self.cost:.2f}€"
 
 # Test program

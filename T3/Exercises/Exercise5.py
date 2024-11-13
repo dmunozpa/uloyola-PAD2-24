@@ -1,14 +1,14 @@
 class Terminal:
     def __init__(self, phone_number:str):
 
-        if not self._validate_phone_number(phone_number):
+        if not self.validate_phone_number(phone_number):
             raise ValueError("Invalid phone number. Please enter a valid 9-digit number starting with 9, 6, or 7.")
         
         self.phone_number = phone_number
         self.conversation_time = 0
 
     # Method validate PhoneNumber
-    def _validate_phone_number(self, phone_number:str)->bool:
+    def validate_phone_number(self, phone_number:str)->bool:
         result = False
         # Review the conditions - (only digits, starting with 9, 6, or 7, and their lengthis nine digit
         if(phone_number.isdigit() and phone_number[0] in ('9', '6', '7') and len(phone_number) == 9):
@@ -23,6 +23,11 @@ class Terminal:
     # Method String
     def __str__(self):
         return f"{self.phone_number} - Conversation time: {self.conversation_time}s"
+
+    # Method String
+    def __repr__(self):
+        return f"{self.phone_number} - Conversation time: {self.conversation_time}s"
+
 
 
 # Test program
